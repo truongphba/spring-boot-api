@@ -1,6 +1,9 @@
 package com.example.springbootasm.controller;
 
+import com.example.springbootasm.entity.Account;
+import com.example.springbootasm.entity.Credential;
 import com.example.springbootasm.entity.Product;
+import com.example.springbootasm.repository.AccountRepository;
 import com.example.springbootasm.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +18,7 @@ import java.util.List;
 public class SeedController {
     @Autowired
     private ProductRepository productRepository;
+    private AccountRepository accountRepository;
 
     @RequestMapping(method = RequestMethod.GET)
     public String seed(){
